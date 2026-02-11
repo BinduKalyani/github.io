@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bindu Kalyani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #2c3e50;
+      color: white;
+      padding: 14px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* LAYOUT */
+    .layout {
+      display: flex;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .container {
+      flex: 3;
+      padding: 40px 30px;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .hero-text {
+      flex: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 8px 14px;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+    }
+
+    .buttons a:hover {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .hero-photo img {
+      width: 200px;
+      border-radius: 6px;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 26px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    /* TOC */
+    .toc {
+      flex: 1;
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+      border-left: 2px solid #eee;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+
+    .toc h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .toc a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #2563eb;
+    }
+
+    .toc a.active {
+      font-weight: bold;
+      color: #1e40af;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .toc {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-photo img {
+        width: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <div class="navbar">
+    <div class="name">Bindu Kalyani</div>
+    <div>
+      <a href="#about">Home</a>
+      <a href="#interests">Interests</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="https://github.com/BinduKalyani" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/bindu-kalyani-guntupalli" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- PAGE LAYOUT -->
+  <div class="layout">
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Bindu Kalyani Guntupalli</h1>
+          <p>
+            Entry-Level Software Engineer | Information Systems Graduate<br>
+            Backend Development • Java • Spring Boot • SQL • Cloud
+          </p>
+
+          <div class="buttons">
+            <a href="https://linkedin.com/in/bindu-kalyani-guntupalli" target="_blank">LinkedIn</a>
+            <a href="https://github.com/BinduKalyani" target="_blank">GitHub</a>
+            <a href="Bindu_Kalyani_Guntupalli_Resume.pdf" target="_blank">📄 Resume</a>
+            <a href="mailto:bindukalyani.guntupalli@gmail.com">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="profile.jpg" alt="Profile photo">
+        </div>
+      </div>
+
+      <!-- SECTIONS -->
+      <section id="about"></section>
+      <section id="interests"></section>
+      <section id="experience"></section>
+      <section id="education"></section>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="toc">
+      <h3>On this page</h3>
+      <a href="#about">👤 About me</a>
+      <a href="#interests">⭐ Areas of interest</a>
+      <a href="#experience">💼 Experience</a>
+      <a href="#education">🎓 Education</a>
+    </aside>
+
+  </div>
+
+  <!-- LOAD MARKDOWN -->
+  <script>
+    function loadMD(file, id) {
+      fetch(file)
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById(id).innerHTML = marked.parse(text);
+        });
+    }
+
+    loadMD("about.md", "about");
+    loadMD("interests.md", "interests");
+    loadMD("experience.md", "experience");
+    loadMD("education.md", "education");
+  </script>
+
+  <!-- TOC HIGHLIGHT -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const tocLinks = document.querySelectorAll(".toc a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        if (pageYOffset >= section.offsetTop - 140) {
+          current = section.id;
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

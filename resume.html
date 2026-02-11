@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bindu Kalyani | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #2c3e50;
+      color: white;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .download {
+      margin-bottom: 30px;
+    }
+
+    .download a {
+      padding: 8px 14px;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+    }
+
+    .download a:hover {
+      background: #2c3e50;
+      color: white;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <div class="navbar">
+    <div class="name">Bindu Kalyani</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="https://github.com/BinduKalyani" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/bindu-kalyani-guntupalli" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h1>Resume</h1>
+
+    <!-- DOWNLOAD PDF -->
+    <div class="download">
+      <a href="Bindu_Kalyani_Guntupalli_Resume.pdf" download>
+        📄 Download PDF Resume
+      </a>
+    </div>
+
+    <!-- MARKDOWN SECTIONS -->
+    <section id="resume-summary"></section>
+    <section id="resume-experience"></section>
+    <section id="resume-education"></section>
+    <section id="resume-skills"></section>
+
+  </div>
+
+  <!-- LOAD MARKDOWN -->
+  <script>
+    function loadMD(file, elementId) {
+      fetch(file)
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById(elementId).innerHTML = marked.parse(text);
+        });
+    }
+
+    loadMD("resume-summary.md", "resume-summary");
+    loadMD("experience.md", "resume-experience");
+    loadMD("education.md", "resume-education");
+    loadMD("skills.md", "resume-skills");
+  </script>
+
+</body>
+</html>

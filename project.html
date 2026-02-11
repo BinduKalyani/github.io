@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bindu Kalyani | Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #2c3e50;
+      color: white;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .note {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <div class="navbar">
+    <div class="name">Bindu Kalyani</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="https://github.com/BinduKalyani" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/bindu-kalyani-guntupalli" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h1>Projects</h1>
+    <p class="note">
+      Selected academic and professional projects demonstrating backend development,
+      data processing, and analytical skills.
+    </p>
+
+    <!-- MARKDOWN CONTENT -->
+    <section id="projects"></section>
+
+  </div>
+
+  <!-- LOAD MARKDOWN -->
+  <script>
+    function loadMD(file, elementId) {
+      fetch(file)
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById(elementId).innerHTML = marked.parse(text);
+        });
+    }
+
+    loadMD("projects.md", "projects");
+  </script>
+
+</body>
+</html>
