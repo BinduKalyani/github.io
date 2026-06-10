@@ -14,7 +14,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-right: 12px;
+  margin-right: 10px;
   padding: 8px 14px;
   border: 1px solid #2c3e50;
   border-radius: 4px;
@@ -94,7 +94,7 @@ a {
 }
 
 .featured-project {
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 15px;
   background: #f8f9fa;
   border-left: 4px solid #2c3e50;
@@ -114,18 +114,23 @@ a {
 
 .project-btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 8px 14px;
-  background: #2c3e50;
-  color: white;
+  border: 1px solid #2c3e50;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
 .project-btn:hover {
-  opacity: 0.9;
+  background: #2c3e50;
+  color: white;
 }
-
+.tech-stack {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
 @media (max-width: 1000px) {
   .layout {
     flex-direction: column;
