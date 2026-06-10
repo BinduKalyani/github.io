@@ -17,6 +17,10 @@ body {
 .hero-photo {
   flex: 1;
 }
+.hero-photo img {
+  width: 320px;
+  border-radius: 8px;
+}
 .buttons a {
   display: inline-flex;
   align-items: center;
