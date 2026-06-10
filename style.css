@@ -93,6 +93,38 @@ a {
   text-decoration: underline;
 }
 
+.featured-project {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #2c3e50;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.featured-project h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.featured-project p {
+  margin-bottom: 12px;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.project-btn:hover {
+  opacity: 0.9;
+}
+
 @media (max-width: 1000px) {
   .layout {
     flex-direction: column;
