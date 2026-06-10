@@ -2,10 +2,19 @@
 
 ### Job Application Tracker
 
-Developed a RESTful backend application using Java and Spring Boot to manage job applications and interview statuses. Implemented GET and POST API endpoints, designed a JobApplication domain model, and returned structured JSON responses. Built and tested the application using Maven and GitHub Codespaces.
+Developed a RESTful backend application using Java and Spring Boot to manage job applications and interview statuses.
 
-**Technologies:** Java, Spring Boot, Maven, REST APIs, GitHub Codespaces
+#### Features
+- Retrieve all job applications
+- Add new job applications via REST API
+- Structured JSON responses
+- Maven-based Spring Boot application
 
-**Status:** Active Development
+#### Technologies
+Java, Spring Boot, Maven, REST APIs, GitHub Codespaces
 
-**GitHub:** https://github.com/BinduKalyani/Job-Application-Tracker
+#### Status
+Active Development
+
+#### Repository
+[View on GitHub](https://github.com/BinduKalyani/Job-Application-Tracker)
