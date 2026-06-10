@@ -3,6 +3,13 @@ body {
   background: #f4f4f4;
   margin: 0;
 }
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 30px;
+}
 .buttons a {
   display: inline-flex;
   align-items: center;
