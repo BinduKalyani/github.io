@@ -69,12 +69,11 @@ a {
 }
 
 .featured-project {
-  margin-top: 15px;
-  padding: 15px;
+  max-width: 750px;
+  padding: 20px 24px;
   background: #f8f9fa;
-  border-left: 4px solid #2c3e50;
-  border-radius: 6px;
-  max-width: 700px;
+  border-left: 5px solid #2c3e50;
+  border-radius: 8px;
 }
 
 .featured-project h3 {
@@ -89,12 +88,13 @@ a {
 
 .project-btn {
   display: inline-block;
-  padding: 8px 14px;
+  padding: 10px 22px;
   border: 1px solid #2c3e50;
   border-radius: 6px;
   text-decoration: none;
   color: #2c3e50;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .project-btn:hover {
