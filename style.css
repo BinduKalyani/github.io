@@ -96,9 +96,10 @@ a {
 .featured-project {
   margin-top: 20px;
   padding: 15px;
-  border-left: 4px solid #2c3e50;
   background: #f8f9fa;
+  border-left: 4px solid #2c3e50;
   border-radius: 6px;
+  max-width: 600px;
 }
 
 .featured-project h3 {
