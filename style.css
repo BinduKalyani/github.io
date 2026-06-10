@@ -10,6 +10,13 @@ body {
   gap: 40px;
   margin-bottom: 20px;
 }
+.hero-text {
+  flex: 3;
+}
+
+.hero-photo {
+  flex: 1;
+}
 .buttons a {
   display: inline-flex;
   align-items: center;
@@ -25,7 +32,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   background: white;
   padding: 40px 60px;
